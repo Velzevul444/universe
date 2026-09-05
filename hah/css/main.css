@@ -1,0 +1,59 @@
+* {
+	color: white ;
+}
+body{
+min-width: 1200px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background-color: #000000;
+
+}
+
+
+
+.center {
+	width: 60px;
+	height: 60px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	border-radius: 50%;
+	position: absolute;
+}
+.Atom{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.orbit{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 135px;
+	height: 255px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 2px solid white;
+}
+
+.electron{
+
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: -120px;
+	background-color: white;
+	border-radius: 50%;
+	left: -60px;
+	transform: translate(-50%, -50%);
+	offset-path: path('M60 2.5C75.1115 2.5 89.4654 14.8157 100.19 36.2656C110.841 57.566 117.5 87.1671 117.5 120C117.5 152.833 110.841 182.434 100.19 203.734C89.4654 225.184 75.1115 237.5 60 237.5C44.8885 237.5 30.5346 225.184 19.8096 203.734C9.15946 182.434 2.5 152.833 2.5 120C2.5 87.1671 9.15946 57.566 19.8096 36.2656C30.5346 14.8157 44.8885 2.5 60 2.5Z');
+	animation: move 5s linear infinite;
+}
+@keyframes move {
+	100%{
+		offset-distance: 100%;
+	}
+}

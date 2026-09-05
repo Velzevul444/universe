@@ -1,0 +1,106 @@
+.User{
+	top: 20px;
+	right: 60px;
+	position: absolute;
+}
+
+.User:active{
+	background-color: #1c1e1c;
+	transform: scale(1.10);
+}
+
+.Logout{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.Logout:active{
+	background-color: #e7eee7;
+	transform: scale(1.10);
+}
+.Authorization {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 420px;
+	min-height: 420px;
+	background: #1E1E1E;
+	border-radius: 40px;
+	z-index: 99;
+	display: flex;
+}
+.Login{
+	position: absolute;
+	top: 12%;
+	left: 20%;
+	font-size: 30px;
+	background: #1E1E1E;
+	user-select: none;
+}
+.Registration{
+	position: absolute;
+	top: 12%;
+	left: 47%;
+	font-size: 30px;
+	background: #1E1E1E;
+	user-select: none;
+
+}
+
+.Email{
+	height: 60px;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	background: #2b2d2b;
+	border-radius: 40px;
+	border: none;
+	width: 350px;
+	text-align: center;
+
+
+}
+.Password{
+	width: 350px;
+	height: 60px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	background: #2b2d2b;
+	border-radius: 40px;
+	border: none;
+	text-align: center;
+
+}
+.ButtonL{
+	width: 350px;
+	text-align: center;
+	line-height: 60px;
+	height: 60px;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	background: #2b2d2b;
+	border-radius: 40px;
+	border: none;
+}
+.REpassword{
+	width: 350px;
+	height: 60px;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	background: #2b2d2b;
+	border-radius: 40px;
+	border: none;
+	text-align: center;
+}

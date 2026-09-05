@@ -1,0 +1,77 @@
+#note {
+	position: absolute;
+	width: 455px;
+	height: 800px;
+	border-radius: 40px;
+	background-color: #1E1E1E;
+	top: 50%;
+	left: 15%;
+	transform: translate(-50%, -50%);
+
+}
+.ButtonRight{
+	top: 13%;
+	transform: translate(-50%, -50%);
+	width: 60px;
+	height: 60px;
+	background-color: black;
+	border-radius: 50%;
+	position: absolute;
+	border: none;
+}
+
+.CreateNewNote {
+	width: 385px;
+	height: 80px;
+	margin: 10px auto auto 35px ;
+	border-radius: 40px;
+	background-color: #2b2d2b;
+	font-size: 20px;
+	border: none;
+}
+.CreateNewNote:active {
+	background-color: #1c1e1c;
+	transform: scale(1.10);
+}
+.NameNote{
+	width: 385px;
+	height: 80px;
+	margin: 10px auto auto 35px ;
+	border-radius: 40px;
+	background-color: #2b2d2b;
+	font-size: 20px;
+	border: none;
+	text-align: center;
+	resize: none;
+	caret-color: transparent;
+	overflow: hidden;
+	line-height: 80px;
+}
+.NameNote::placeholder{
+	color:white;
+
+}
+.WriteNote{
+	min-width: 385px;
+	max-width: 385px;
+	min-height: 80px;
+	max-height: 580px;
+	margin: 10px auto auto 35px ;
+	border-radius: 40px;
+	background-color: #1E1E1E;
+	font-size: 20px;
+	border-color: white;
+	text-color: white;
+	resize: none;
+	text-align: center;
+	caret-color: transparent;
+	overflow-y: hidden;
+
+}
+.WriteNote::placeholder{
+	line-height: 80px;
+	color:white;
+
+}
+
+
