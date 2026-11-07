@@ -9,6 +9,12 @@
 	transform: translate(-50%, -50%);
 
 }
+.NotesScope {
+	margin: 16px 24px 0;
+	font-size: 18px;
+	font-weight: 500;
+	overflow-wrap: anywhere;
+}
 .ButtonRight{
 	top: 13%;
 	transform: translate(-50%, -50%);
@@ -29,9 +35,22 @@
 	font-size: 20px;
 	border: none;
 }
+.CreateNewNote:disabled {
+	cursor: not-allowed;
+	opacity: 0.55;
+}
 .CreateNewNote:active {
 	background-color: #1c1e1c;
 	transform: scale(1.10);
+}
+.CancelNoteEdit {
+	display: block;
+	margin: 8px auto;
+	padding: 10px 16px;
+	border: 1px solid #555;
+	border-radius: 14px;
+	background: #2b2d2b;
+	cursor: pointer;
 }
 .NameNote{
 	width: 385px;
@@ -73,5 +92,210 @@
 	color:white;
 
 }
+.ElectronCoreSelectLabel {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	margin: 8px 35px 0;
+	padding: 0 16px;
+	min-height: 52px;
+	border: 1px solid #555;
+	border-radius: 18px;
+	background: #2b2d2b;
+	font-size: 15px;
+}
+.ElectronCoreSelect {
+	max-width: 55%;
+	padding: 8px 10px;
+	border: 1px solid #666;
+	border-radius: 12px;
+	background: #1e1e1e;
+	font-size: 14px;
+}
 
+.SavedNotes {
+	width: 385px;
+	max-height: 380px;
+	margin: 12px 35px 20px;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.SavedNote {
+	padding: 14px 18px;
+	border: 1px solid #454545;
+	border-radius: 18px;
+	background-color: #2b2d2b;
+	overflow-wrap: anywhere;
+}
+.SavedNoteHeader {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 12px;
+}
+.SavedNoteHeader strong {
+	font-size: 18px;
+}
+.EditNote {
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: left;
+	cursor: pointer;
+}
+.EditNoteLabel {
+	font-size: 18px;
+	overflow-wrap: anywhere;
+}
+.NoteAuthor {
+	margin-top: 6px;
+	color: #bdbdbd;
+	font-size: 12px;
+}
+.NoteCollaborators {
+	margin: 8px 35px 0;
+	padding: 8px 12px;
+	border-radius: 10px;
+	background: #2b2d2b;
+	color: #bdbdbd;
+	font-size: 12px;
+	overflow-wrap: anywhere;
+}
+.SaveNoteCopy {
+	display: block;
+	margin: 8px auto 0;
+	padding: 8px 12px;
+	border: 1px solid #555;
+	border-radius: 10px;
+	background: #2b2d2b;
+	cursor: pointer;
+}
+.NoteShareSettings {
+	margin: 10px 24px;
+	padding: 10px 12px;
+	border: 1px solid #444;
+	border-radius: 10px;
+	color: #d3d3d3;
+	font-size: 13px;
+}
+.NoteShareRow,
+.NoteShareForm {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 8px;
+}
+.NoteShareRow {
+	justify-content: space-between;
+	overflow-wrap: anywhere;
+}
+.NoteShareForm input {
+	flex: 1;
+	min-width: 0;
+}
+.NoteShareSettings input,
+.NoteShareSettings select,
+.NoteShareSettings button {
+	padding: 7px 9px;
+	border: 1px solid #555;
+	border-radius: 8px;
+	background: #2b2d2b;
+	color: inherit;
+}
+.NoteShareSettings button {
+	cursor: pointer;
+}
+.NoteShareSettings button:disabled {
+	opacity: 0.6;
+	cursor: default;
+}
+.SavedNote p {
+	margin: 8px 0 0;
+	white-space: pre-wrap;
+	line-height: 1.4;
+}
+.DeleteNote {
+	flex: 0 0 auto;
+	padding: 5px 10px;
+	border: 0;
+	border-radius: 10px;
+	background: #3b3b3b;
+	cursor: pointer;
+}
+.DeleteNote:hover {
+	background: #603737;
+}
+.EmptyNotes,
+.NoteError {
+	padding: 10px;
+	color: #c7c7c7;
+	text-align: center;
+}
+.NoteError {
+	color: #ff8a8a;
+}
 
+@media (max-width: 1000px) {
+	#note {
+		left: 25%;
+		width: 40vw;
+		height: min(800px, calc(100vh - 32px));
+	}
+	#note .CreateNewNote,
+	#note .NameNote,
+	#note .WriteNote {
+		box-sizing: border-box;
+		width: calc(100% - 32px);
+		min-width: 0;
+		max-width: none;
+		margin: 8px 16px 0;
+	}
+	#note .CreateNewNote,
+	#note .NameNote {
+		height: 58px;
+		font-size: clamp(14px, 2.2vw, 20px);
+	}
+	#note .NameNote {
+		line-height: 58px;
+	}
+	#note .WriteNote {
+		min-height: 58px;
+		max-height: 180px;
+		font-size: clamp(14px, 2.2vw, 20px);
+	}
+	.ElectronCoreSelectLabel {
+		margin: 8px 16px 0;
+		font-size: clamp(12px, 1.8vw, 15px);
+	}
+	.SavedNotes {
+		box-sizing: border-box;
+		width: calc(100% - 32px);
+		max-height: max(48px, calc(100vh - 282px));
+		margin: 8px 16px 12px;
+	}
+	.ButtonRight {
+		left: 25%;
+	}
+}
+
+@media (max-width: 600px) {
+	#note {
+		left: 25%;
+		width: 46vw;
+	}
+	#note .CreateNewNote,
+	#note .NameNote,
+	#note .WriteNote,
+	.SavedNotes,
+	.ElectronCoreSelectLabel {
+		width: calc(100% - 20px);
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+}

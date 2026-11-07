@@ -1,3 +1,8 @@
+.rUser {
+	position: relative;
+	z-index: 100;
+}
+
 .User{
 	top: 20px;
 	right: 60px;
@@ -19,7 +24,7 @@
 	transform: scale(1.10);
 }
 .Authorization {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -36,7 +41,10 @@
 	left: 20%;
 	font-size: 30px;
 	background: #1E1E1E;
+	color: #e9f3e9;
 	user-select: none;
+	border: 0;
+	cursor: pointer;
 }
 .Registration{
 	position: absolute;
@@ -44,8 +52,14 @@
 	left: 47%;
 	font-size: 30px;
 	background: #1E1E1E;
+	color: #e9f3e9;
 	user-select: none;
-
+	border: 0;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.AuthSelected {
+	text-decoration: underline;
 }
 
 .Email{
@@ -90,6 +104,15 @@
 	background: #2b2d2b;
 	border-radius: 40px;
 	border: none;
+	color: #e9f3e9;
+	cursor: pointer;
+}
+.ButtonL:disabled {
+	cursor: wait;
+	opacity: 0.7;
+}
+.Authorization:not(.AuthorizationRegister) .ButtonL {
+	top: 88%;
 }
 .REpassword{
 	width: 350px;
@@ -103,4 +126,304 @@
 	border-radius: 40px;
 	border: none;
 	text-align: center;
+}
+.AuthorizationRegister .Email {
+	top: 30%;
+}
+.AuthorizationRegister .Password {
+	top: 48%;
+}
+.AuthorizationRegister .REpassword {
+	top: 66%;
+}
+.AuthorizationRegister .ButtonL {
+	top: 86%;
+	font-size: 24px;
+}
+.AuthError {
+	position: absolute;
+	top: 69%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	color: #ff8a8a;
+	text-align: center;
+}
+.AuthorizationRegister .AuthError {
+	top: 76%;
+}
+.SaveStatus {
+	position: absolute;
+	top: 52px;
+	right: 20px;
+	max-width: 320px;
+	font-size: 13px;
+	color: #e9f3e9;
+	text-align: right;
+}
+.AdminUsersButton {
+	position: absolute;
+	top: 20px;
+	right: 100px;
+	display: grid;
+	place-items: center;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background: transparent;
+	cursor: pointer;
+}
+.AdminUsersButton:hover {
+	background: transparent;
+	opacity: 0.75;
+}
+.AdminUsersButton svg {
+	width: 22px;
+	height: 22px;
+	fill: none;
+	stroke: #fff;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 1.8;
+}
+.AdminUsersBackdrop {
+	position: fixed;
+	inset: 0;
+	z-index: 200;
+	display: grid;
+	place-items: center;
+	padding: 20px;
+	background: rgb(0 0 0 / 75%);
+}
+.AdminUsersDialog {
+	box-sizing: border-box;
+	width: min(640px, 100%);
+	max-height: min(80vh, 760px);
+	overflow: auto;
+	padding: 24px;
+	border: 1px solid #454545;
+	border-radius: 24px;
+	background: #1e1e1e;
+}
+.AdminUsersHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin-bottom: 18px;
+}
+.AdminUsersHeader h2 {
+	margin: 0;
+}
+.AdminUsersClose {
+	width: 38px;
+	height: 38px;
+	border: 0;
+	border-radius: 50%;
+	background: #333;
+	font-size: 24px;
+	cursor: pointer;
+}
+.AdminUsersList {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.AdminUserRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 14px;
+	padding: 14px;
+	border: 1px solid #454545;
+	border-radius: 16px;
+	background: #2b2d2b;
+	overflow-wrap: anywhere;
+}
+.AdminUserMeta {
+	margin-top: 6px;
+	color: #c7c7c7;
+	font-size: 13px;
+}
+.AdminUserDelete {
+	flex: 0 0 auto;
+	padding: 8px 12px;
+	border: 0;
+	border-radius: 12px;
+	background: #633a3a;
+	cursor: pointer;
+}
+.AdminUserDelete:disabled {
+	cursor: wait;
+	opacity: 0.65;
+}
+.AdminUsersError {
+	color: #ff8a8a;
+}
+.GroupsPanel {
+	position: relative;
+	z-index: 120;
+}
+.GroupsToggle {
+	position: absolute;
+	top: 18px;
+	left: 20px;
+	z-index: 120;
+	padding: 8px 12px;
+	border: 1px solid #454545;
+	border-radius: 12px;
+	background: #1e1e1e;
+	cursor: pointer;
+}
+.GroupsBackdrop {
+	position: fixed;
+	inset: 0;
+	z-index: 210;
+	display: grid;
+	place-items: center;
+	padding: 16px;
+	background: rgb(0 0 0 / 75%);
+}
+.GroupsDialog {
+	box-sizing: border-box;
+	width: min(520px, 100%);
+	max-height: min(82vh, 760px);
+	overflow: auto;
+	padding: 22px;
+	border: 1px solid #454545;
+	border-radius: 18px;
+	background: #1e1e1e;
+}
+.GroupsHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+.GroupsHeader h2,
+.GroupsDialog h3 {
+	margin: 0 0 14px;
+	font-size: 18px;
+}
+.GroupsDialog h3 {
+	margin-top: 20px;
+}
+.GroupsClose {
+	width: 34px;
+	height: 34px;
+	border: 0;
+	border-radius: 50%;
+	background: #333;
+	font-size: 22px;
+	cursor: pointer;
+}
+.GroupsList {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.GroupRow,
+.GroupInvitation,
+.GroupMember {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	width: 100%;
+	padding: 11px 12px;
+	border: 1px solid #454545;
+	border-radius: 12px;
+	background: #2b2d2b;
+	text-align: left;
+	overflow-wrap: anywhere;
+}
+.GroupRow {
+	cursor: pointer;
+}
+.GroupSelected {
+	border-color: #aab4ca;
+}
+.GroupMeta,
+.GroupsHint {
+	color: #bdbdbd;
+	font-size: 12px;
+}
+.GroupInvitation {
+	align-items: flex-start;
+}
+.GroupActions {
+	display: flex;
+	gap: 6px;
+}
+.GroupActions button,
+.GroupForm button {
+	padding: 8px 10px;
+	border: 1px solid #555;
+	border-radius: 10px;
+	background: #333;
+	cursor: pointer;
+}
+.GroupActions select,
+.GroupForm select {
+	min-width: 0;
+	padding: 8px 10px;
+	border: 1px solid #555;
+	border-radius: 10px;
+	background: #2b2d2b;
+}
+.GroupRemove,
+.GroupDelete {
+	padding: 8px 10px;
+	border: 1px solid #555;
+	border-radius: 10px;
+	background: #333;
+	cursor: pointer;
+}
+.GroupDelete {
+	margin-top: 12px;
+	color: #ffb0b0;
+}
+.GroupRemove:disabled,
+.GroupDelete:disabled {
+	cursor: wait;
+	opacity: 0.6;
+}
+.GroupActions button:disabled,
+.GroupForm button:disabled {
+	cursor: wait;
+	opacity: 0.6;
+}
+.GroupForm {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 10px;
+}
+.GroupForm input {
+	box-sizing: border-box;
+	min-width: 0;
+	flex: 1;
+	padding: 10px 12px;
+	border: 1px solid #555;
+	border-radius: 10px;
+	background: #2b2d2b;
+}
+.GroupForm input[type="email"] {
+	flex-basis: 200px;
+}
+.GroupsError {
+	margin: 14px 0 0;
+	color: #ff8a8a;
+}
+
+@media (max-width: 480px) {
+	.GroupsDialog {
+		padding: 16px;
+	}
+	.GroupInvitation {
+		flex-direction: column;
+	}
 }

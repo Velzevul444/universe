@@ -30,6 +30,8 @@
 	text-align: center;
 	line-height: 80px;
 	user-select: none;
+	border: none;
+	cursor: pointer;
 
 }
 
@@ -44,9 +46,11 @@
 	text-align: center;
 	line-height: 80px;
 	user-select: none;
+	cursor: pointer;
 
 }
 .NewBond{
+	display: block;
 	width: 385px;
 	height: 80px;
 	margin: 10px auto auto 35px ;
@@ -55,9 +59,17 @@
 	font-size: 20px;
 	border: none;
 	text-align: center;
-	line-height: 80px;
+	line-height: normal;
 	user-select: none;
-
+	cursor: pointer;
+}
+.NewBond.BondSelected {
+	background-color: #45486b;
+	outline: 2px solid #aab5ff;
+}
+.NewBond:disabled {
+	cursor: not-allowed;
+	opacity: 0.55;
 }
 .SetColor{
 	width: 385px;
@@ -70,7 +82,15 @@
 	text-align: center;
 	line-height: 80px;
 	user-select: none;
+	cursor: pointer;
 
+}
+.NewCore:disabled,
+.NewElectron:disabled,
+.NewBond:disabled,
+.SetColor:disabled {
+	cursor: not-allowed;
+	opacity: 0.55;
 }
 
 .PutColor{
@@ -86,4 +106,46 @@
 
 .PutColor::-webkit-color-swatch-wrapper {
 	padding: 0;
+}
+
+@media (max-width: 1000px) {
+	.treeNote {
+		left: 75%;
+		width: 40vw;
+		height: min(800px, calc(100vh - 32px));
+	}
+	.treeNote .NewCore,
+	.treeNote .NewElectron,
+	.treeNote .NewBond,
+	.treeNote .SetColor,
+	.treeNote .PutColor {
+		box-sizing: border-box;
+		width: calc(100% - 32px);
+		height: 58px;
+		margin: 8px 16px 0;
+		font-size: clamp(14px, 2.2vw, 20px);
+		line-height: 58px;
+	}
+	.treeNote .PutColor {
+		line-height: normal;
+	}
+	#root > .ButtonRight:first-child {
+		left: 75%;
+	}
+}
+
+@media (max-width: 600px) {
+	.treeNote {
+		left: 75%;
+		width: 46vw;
+	}
+	.treeNote .NewCore,
+	.treeNote .NewElectron,
+	.treeNote .NewBond,
+	.treeNote .SetColor,
+	.treeNote .PutColor {
+		width: calc(100% - 20px);
+		margin-right: 10px;
+		margin-left: 10px;
+	}
 }
